@@ -1,0 +1,285 @@
+body {
+	color: #000;
+	font: 14px 'Roboto', sans-serif;
+	line-height: 1.15;
+	word-wrap: break-word;
+}
+
+h1,
+.h1 {
+	font-size: 42px;
+	margin: 1em 0;
+	position: relative;
+	text-transform: uppercase;
+}
+
+h2,
+.h2 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 1em 0;
+	padding: 0;
+}
+
+h3,
+.h3 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 1em 0;
+	padding: 0;
+}
+
+h1:first-child, .h1:first-child,
+h2:first-child, .h2:first-child,
+h3:first-child, .h3:first-child {
+	margin-top: 0;
+}
+
+p {
+	line-height: 1.5;
+	margin: 1.5em 0;
+}
+
+	p:first-child {
+		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+a {
+}
+
+.pseudo-link {
+	cursor: pointer;
+	text-decoration-style: dashed;
+}
+
+	a,
+	.pseudo-link {
+		color: #5c90fe;
+		text-decoration-color: rgba(92,144,254,0);
+		transition: text-decoration-color .3s, color .3s;
+	}
+
+	a:hover,
+	.pseudo-link:hover {
+		color: #5c90fe;
+		text-decoration-color: rgba(92,144,254,.3);
+	}
+
+	a:active {
+		background: none;
+		color: #dd153f;
+		text-decoration-color: rgba(221,21,63,.3);
+	}
+
+	a:visited {
+		background: none;
+		color: #dd153f;
+		text-decoration-color: rgba(221,21,63,.3);
+	}
+
+	a * {
+		cursor: pointer;
+	}
+
+	a[href^="tel"] {
+		color: inherit;
+	}
+
+img {
+	border: none;
+}
+
+.clear {
+	clear: both;
+	float: none;
+	height: 0;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+	.clearfix:before,
+	.clearfix:after {
+		content: "";
+		display: table;
+		line-height: 0;
+	}
+
+	.clearfix:after {
+		clear: both;
+	}
+
+.em {
+	font-style: italic;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.ta-c {
+	text-align: center;
+}
+
+.ul-nomarker
+{
+	line-height: 1.5;
+	list-style: none;
+	margin: 20px 0;
+	padding: 0;
+}
+
+	.ul-nomarker:first-child,
+	.ul-nomarker.first-child {
+		margin-top: 0;
+	}
+
+	.ul-nomarker:last-child,
+	.ul-nomarker.last-child {
+		margin-bottom: 0;
+	}
+
+	.ul-nomarker li {
+		margin: 0 0 7px 0;
+	}
+
+.ul-marker {
+	line-height: 1.5;
+	list-style: none;
+	margin: 20px 0;
+	padding: 0;
+}
+
+	.ul-marker li {
+		margin: 0 0 7px 0;
+		padding: 0 0 0 28px;
+		position: relative;
+	}
+
+	.ul-marker li:before {
+		content: "—";
+		left: 0;
+		line-height: 0;
+		position: absolute;
+		top: 7px;
+	}
+
+.ol-numbers {
+	counter-reset: item;
+	line-height: 1.5;
+	list-style: none;
+	margin: 20px 0;
+	padding: 0;
+}
+
+	.ol-numbers li
+	{
+		margin: 0 0 7px 0;
+		padding: 0 0 0 28px;
+		position: relative;
+	}
+
+	.ol-numbers li:before {
+		content: counters(item,".") ". ";
+		counter-increment: item;
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+
+.svg-icon {
+	display: inline-block;
+	fill-rule: evenodd;
+	vertical-align: middle;
+}
+
+.site-button,
+.site-button:visited {
+	align-items: center;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	border: 2px solid #57A955;
+	border-radius: 23px;
+	color: #2B4254;
+	cursor: pointer;
+	display: inline-flex;
+	height: 46px;
+	justify-content: center;
+	margin: 0;
+	padding: 8px 36px;
+	text-align: center;
+	text-decoration: none;
+	transition: all .3s;
+}
+
+	.site-button:hover,
+	.site-button:active {
+		background-color: #57A955;
+		color: #fff;
+	}
+	
+	.site-button--fill {
+		background-color: #57A955;
+		color: #fff;
+	}
+	
+		.site-button--fill:hover,
+		.site-button--fill:active {
+			background-color: transparent;
+			color: #2B4254;
+		}
+
+@media (max-width: 767px) {
+	.ta-c--mobile {
+		text-align: center;
+	}
+}
+    
+.radio-styling {
+    background: #fff;
+    border: 1px solid #c7cfd6;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 26px;
+    margin-right: 5px;
+    position: relative;
+    vertical-align: -8px;
+    width: 26px;
+	border-radius: 50%;
+}
+
+.radio-styling input {
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.fake-radio__mark {
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transition: all 0.15s ease-out;
+	background-color: #bd0b13;
+	border-radius: 50%;
+	height: 10px;
+	margin: -5px 0 0 -5px;
+	transform: scale(0);
+	width: 10px;
+}
+
+.radio-styling input:checked + .fake-radio__mark {
+    transform: scale(1);
+}

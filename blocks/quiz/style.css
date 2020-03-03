@@ -1,0 +1,203 @@
+.quiz-frame {
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4);
+  margin: 40px auto;
+  max-width: 760px;
+  text-align: left;
+}
+
+  .quiz-frame__header {
+    align-items: center;
+    background: #aa0511;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+    justify-content: space-between;
+    padding: 35px 45px 40px 35px;
+  }
+    
+    .quiz-frame__logo {
+      flex: 0 0 150px;
+      width: 150px;
+    }
+
+    .quiz-frame__title {
+      flex: 1 1 100%;
+      font-size: 20px;
+      margin-top: 20px;
+      order: 1;
+    }
+    
+    .quiz-frame__progress-step {
+      flex: 1 1 auto;
+      font-size: 22px;
+      text-align: right;
+    }
+    
+  .quiz-frame__progressbar {
+    background-color: #cbcbcb;
+    height: 5px;
+  }
+    
+    .quiz-frame__progress {
+      background-color: rgb(47, 168, 71);
+      height: 100%;
+      width: 0;
+    }
+    
+  .quiz-frame__body {
+    background: #fff;
+    padding: 35px;
+  }
+    
+    .quiz-frame__list {
+    }
+      
+      .--init .quiz-frame__item {
+        display: none;
+      }
+        
+        .quiz-frame__item.--active {
+          display: block;
+        }
+        
+        .quiz-frame__fields-row {
+          font-size: 16px;
+          position: relative;
+        }
+          
+          .quiz-frame__fields-row + .quiz-frame__fields-row {
+            margin-top: 20px;
+          }
+          
+          .quiz-frame__field-text {
+            border: none;
+            border-bottom: 1px solid #b3b3b3;
+            color: #000;
+            font-family: inherit;
+            font-size: 16px;
+            outline: none;
+            padding: 10px 20px;
+            width: 100%;
+          }
+          
+          .moving-placeholder__field {
+            padding: 26px 20px 10px 0;
+          }
+          
+    .quiz-frame__messages {
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+      .quiz-frame__messages--error {
+        background: #f95d51;
+        color: #fff;
+      }
+
+        .quiz-frame__messages--error .errortext {
+          color: #fff !important;
+        }
+        
+        .quiz-frame__messages--success {
+          background: #c0fcc8;
+        }
+        
+  .quiz-frame__footer {
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 35px;
+  }
+    
+    .quiz-frame__prev {
+      background: #cbcbcb;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 10px;
+      order: 1;
+      padding: 14px 30px;
+      width: 100%;
+    }
+      
+      .quiz-frame__prev[disabled=disabled] {
+          cursor: default;
+          opacity: .7;
+      }
+
+    .quiz-frame__next,
+    .quiz-frame__finish {
+      background: #bd0b13;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 14px 30px;
+      width: 100%;
+    }
+
+@media screen and (min-width: 992px) {
+  .quiz-frame {
+  }
+    
+    .quiz-frame__header {
+      flex-wrap: nowrap;
+    }
+    
+      .quiz-frame__logo {
+      }
+      
+      .quiz-frame__title {
+        flex: 1 1 100%;
+        margin: 0;
+        order: 0;
+        padding: 0 40px;
+      }
+      
+      .quiz-frame__progress-step {
+        flex: 0 0 auto;
+        text-align: right;
+      }
+    
+    .quiz-frame__footer {
+      flex-wrap: nowrap;
+    }
+    
+      .quiz-frame__prev,
+      .quiz-frame__next,
+      .quiz-frame__finish {
+        margin: 0;
+        order: 0;
+        width: auto;
+      }
+}
+
+.moving-placeholder {
+  position: relative;
+}
+
+  .moving-placeholder__label {
+    color: rgba(0,0,0,.5);
+    font-size: 16px;
+    left: 0;
+    line-height: 16px;
+    pointer-events: none;
+    position: absolute;
+    top: 18px;
+    transition: all .2s;
+  }
+
+    .moving-placeholder__field:focus + .moving-placeholder__label,
+    .moving-placeholder__field.--focus + .moving-placeholder__label {
+        font-size: 12px;
+        top: 6px;
+    }
